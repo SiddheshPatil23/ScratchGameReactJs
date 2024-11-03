@@ -1,16 +1,17 @@
 const { merge } = require("webpack-merge");
 const common = require("./webpack.common.js");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const path = require("path"); // Add this line
 
 process.env["NODE_ENV"] = "production";
 
 module.exports = merge([
-  common,{
+  common,
+  {
     output: {
       filename: 'app.js',
       path: path.resolve(__dirname, 'dist'),
     },
-  {
     mode: "production",
     optimization: {
       minimize: true,
