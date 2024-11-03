@@ -5,10 +5,11 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 process.env["NODE_ENV"] = "production";
 
 module.exports = merge([
-  common,output: {
-    filename: 'app.js',
-    path: path.resolve(__dirname, 'dist'),
-  },
+  common,{
+    output: {
+      filename: 'app.js',
+      path: path.resolve(__dirname, 'dist'),
+    },
   {
     mode: "production",
     optimization: {
