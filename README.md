@@ -1,4 +1,4 @@
-# Scratch starter project
+# Scratch starter project - Level 1 project - Single Sprite
 
 To get started:
 
